@@ -1,0 +1,48 @@
+/* color palette: https://colorhunt.co/palette/189792 */
+
+body {
+  background-color: #ea907a;
+  background-image: url(https://www.transparenttextures.com/patterns/black-thread-light.png);
+  margin: 0;
+}
+
+.window {
+  background-color: #fbc687;
+  margin: 5% auto;
+  width: 80%;
+  max-width: 800px;
+  color: #000;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+#editor {
+  background-color: #aacdbe;
+  border: solid #ea907a 0.5rem;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 0.6rem;
+  resize: vertical;
+}
+
+#preview {
+  border: solid #ea907a 0.5rem;
+  background-color: #f4f7c5;
+  padding: 0.6rem;
+  min-height: 300px;
+  border-radius: 0 0 6px 6px;
+}
+
+footer {
+  padding: 1rem 0 0 0;
+}
+
+footer a {
+  color: grey;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+footer a:hover {
+  color: #ea907a;
+}
