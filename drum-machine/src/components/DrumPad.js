@@ -32,6 +32,7 @@ function DrumPad(props) {
         document.addEventListener('keydown', handleKeydown);
 
         changeStyle();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); // run only on mount
 
     return (
