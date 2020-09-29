@@ -17,10 +17,6 @@ https://www.themoviedb.org/settings/api
 https://developers.themoviedb.org/3/getting-started/introduction
 
 
-Todos:
-- resize and align search bar relative to movie grid width (number of movie cards)
-
-
 Web App Architecture:
 - Landing page
     - logo (→ Landing page)
