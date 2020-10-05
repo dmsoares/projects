@@ -1,39 +1,181 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Montserrat:wght@700&display=swap");
+
+::selection {
+  background: transparent;
+}
+
+:root {
+  --circle-radius: 35vw;
+  --percent: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gayathri", sans-serif;
+  min-height: 100vh;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://www.transparenttextures.com/patterns/black-thread-light.png);
+}
+
+#title {
+  text-align: center;
+  font-size: calc(var(--circle-radius) * 0.3);
+  color: rgb(246, 87, 86);
+  padding: 10% 0 0;
+}
+
+main {
+  width: inherit;
+}
+
+#timer {
+  position: relative;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#timer svg {
+  height: calc(var(--circle-radius) * 2.5);
+  width: calc(var(--circle-radius) * 2.5);
+}
+
+#timer svg circle {
+  cx: calc(var(--circle-radius) * 1.25);
+  cy: calc(var(--circle-radius) * 1.25);
+  r: var(--circle-radius);
+  fill: none;
+  stroke-width: calc(0.06 * var(--circle-radius));
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+#timer svg circle:nth-child(1) {
+  stroke: rgba(246, 87, 86, 0.2);
+}
+
+#timer svg circle:nth-child(2) {
+  stroke: rgb(246, 87, 86);
+  stroke-dasharray: calc(var(--circle-radius) * 2 * 3.1415);
+  stroke-dashoffset: calc(var(--circle-radius) * 2 * 3.1415 * var(--percent));
+  /*   transition: stroke-dashoffset 1s linear; */
+}
+
+#time-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(var(--circle-radius) * 0.4);
+  font-weight: 600;
+}
+
+#timer-label {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(var(--circle-radius) * 0.12);
+}
+
+.break {
+  color: rgb(246, 87, 86);
+}
+
+.button {
+  width: auto;
+  height: auto;
+  padding: calc(var(--circle-radius) * 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--circle-radius) * 0.15);
+  border-radius: 50%;
+  background: rgba(246, 87, 86, 0.2);
+  color: rgb(246, 87, 86);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: rgba(223, 227, 235, 0.5);
+}
+
+#reset {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#start_stop {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: calc(var(--circle-radius) * 0.06);
+  font-size: calc(var(--circle-radius) * 0.24);
+}
+
+#settings {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+  font-size: calc(var(--circle-radius) * 0.18);
+  text-align: center;
+  width: 100%;
+}
+
+.settings-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minutes {
+  font-size: calc(var(--circle-radius) * 0.22);
+}
+
+.operator {
+  font-size: calc(var(--circle-radius) * 0.35);
+  color: rgb(246, 87, 86);
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.operator:hover {
+  color: #dfe3eb;
+}
+
+footer {
+  color: #4d3e3e;
+  padding: 2rem;
+  font-family: arial;
+  font-size: 0.8rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer a {
+  color: rgb(246, 87, 86);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+footer a:hover {
+  color: rgba(246, 87, 86, 0.2);
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
+@media only screen and (min-width: 380px) {
+  :root {
+    --circle-radius: 150px;
   }
 }
