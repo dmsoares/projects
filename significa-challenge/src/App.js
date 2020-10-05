@@ -38,7 +38,7 @@ export default function App() {
   async function getMovies() {
     if (currentQuery) {
       const tmdbResponse = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_APIKEY}&language=en-US&query=${currentQuery}&page=1&include_adult=false`
+        `https://api.themoviedb.org/3/search/movie?api_key=${REACT_APP_TMDB_APIKEY}&language=en-US&query=${currentQuery}&page=1&include_adult=false`
       );
       const tmdbMovies = await tmdbResponse.json();
       console.log(tmdbMovies);
@@ -49,11 +49,11 @@ export default function App() {
 
   async function getSelectedMovie(movieId) {
     const movieResponse = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_APIKEY}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${REACT_APP_TMDB_APIKEY}&language=en-US`
     );
     const selectedMovie = await movieResponse.json();
     const ratingsResponse = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${TMDB_APIKEY}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${REACT_APP_TMDB_APIKEY}&language=en-US`
     );
     const selectedMovieRatings = await ratingsResponse.json();
     setSelectedMovie({ ...selectedMovie, ...selectedMovieRatings });
