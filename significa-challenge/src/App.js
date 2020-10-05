@@ -7,7 +7,7 @@ import LandingBackground from "./components/LandingBackground";
 import MoviesGrid from "./components/MoviesGrid";
 import MovieModal from "./components/MovieModal";
 
-const { TMDB_APIKEY } = process.env;
+const { REACT_APP_TMDB_APIKEY } = process.env;
 
 export default function App() {
   const [currentQuery, setCurrentQuery] = useState("");
