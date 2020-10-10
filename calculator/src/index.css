@@ -16,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  width: 100%;
+}
+
 #calculator {
   background: #4d3e3e;
   border-radius: 20px;
@@ -23,6 +27,8 @@ body {
   padding: 25px;
   width: 230px;
   box-shadow: 8px 8px 8px #888888;
+  margin-top: calc(2% + 25px);
+  margin-bottom: calc(2% + 25px);
 }
 
 #outer-display {
@@ -60,12 +66,12 @@ hr {
 }
 
 footer {
-  margin-top: 3rem;
   color: #4d3e3e;
-  padding: 2rem;
   font-family: arial;
   font-size: 0.8rem;
   text-align: center;
+  padding: 0 30px;
+  margin: auto;
 }
 
 footer a {
