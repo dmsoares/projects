@@ -16,6 +16,17 @@ body {
   border-radius: 6px;
 }
 
+@media only screen and (max-width: 768px) {
+    .window {
+        margin: 0;
+        width: 100vw;
+        border-radius: 0;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
 #editor {
   background-color: #aacdbe;
   border: solid #ea907a 0.5rem;
